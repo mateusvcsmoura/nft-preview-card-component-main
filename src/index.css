@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    --very-dark-blue-main-bg: hsl(217, 54%, 11%);
+    --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--very-dark-blue-main-bg);
+}
+
+.wrapper {
+    padding: 2rem;
+    border-radius: 0.4rem;
+    width: 25vw;
+    background-color: var(--very-dark-blue-card-bg);
+}
+
+.image-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.image-container .etherum-image {
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.image-container .icon-eye .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.image-container:hover .icon-eye .icon {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.about-crypto {
+    padding: 1rem 0;
+}
+
+.about-crypto .title {
+    font-size: 1.6rem;
+    color: var(--white);
+    transition: .2s ease-out;
+    font-weight: 600;
+}
+
+.about-crypto .title:hover {
+    cursor: pointer;
+    color: var(--cyan);
+}
+
+.about-crypto .paragraph {
+    margin-top: 1rem;
+    color: var(--white);
+    font-weight: 400;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stats div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stats-info {
+    margin-left: .3rem;
+}
+
+.eth {
+    color: var(--cyan);
+}
+
+.days {
+    color: #afafaf;
+}
+
+hr {
+    margin: 1rem 0;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+}
+
+.author img {
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+}
+
+.attribution {
+    margin-left: .4rem;
+    color: #afafaf;
+}
+
+.attribution .author-name {
+    color: var(--white);
+    transition: .2s ease-out;
+}
+
+.attribution .author-name:hover {
+    cursor: pointer;
+    color: var(--cyan);
+}
+
+/* Responsive design */
+
+@media (max-width: 551px) {
+    .wrapper {
+        padding: 2rem;
+        width: 85vw;
+        background-color: var(--very-dark-blue-card-bg);
+        border-radius: 0.5rem;
+    }
+    
+    .image-container {
+        position: relative;
+    }
+    
+    .image-container .etherum-image {
+        width: 100%;
+        border-radius: .5rem;
+    }
+    
+    .image-container .icon-eye .icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+    }
+    
+    .image-container:hover .icon-eye .icon {
+        cursor: pointer;
+        opacity: 1;
+    }
+    
+    .about-crypto {
+        padding: 1rem 0;
+    }
+    
+    .about-crypto .title {
+        color: var(--white);
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+    
+    .about-crypto .paragraph {
+        color: var(--white);
+        font-size: .9rem;
+        margin-top: .7rem;
+        font-weight: 400;
+    }
+    
+    .stats {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .stats div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .stats-info {
+        margin-left: .3rem;
+    }
+    
+    .eth {
+        color: var(--cyan);
+    }
+    
+    .days {
+        color: #afafaf;
+    }
+    
+    hr {
+        margin: 1rem 0;
+        border-color: var(--very-dark-blue-line);
+    }
+    
+    .author {
+        display: flex;
+        align-items: center;
+    }
+    
+    .author img {
+        width: 2.2rem;
+        height: 2.2rem;
+        border-radius: 50%;
+    }
+    
+    .author .attribution {
+        margin-left: .3rem;
+        color: #afafaf;
+    }
+    
+    .author .attribution .author-name {
+        color: var(--white);
+    }
+}
+
